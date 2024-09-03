@@ -67,6 +67,17 @@ def recursionFactorial(n):
     #recursive case
     else:
         return n * recursionFactorial(n - 1)
+    
+def closureFn():
+    cars = []
+
+    def innerClosure(x):
+        cars.append(x)
+        print(cars)
+
+    return innerClosure
+
+enterCar = closureFn()
 
 def main():
     sum(567,34)
@@ -79,6 +90,9 @@ def main():
     pythonSetFn()
     carDict()
     print(recursionFactorial(5))
+    enterCar("Audi")
+    enterCar("BMW")
+    enterCar("Mercedes")
 
 main()
 
