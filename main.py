@@ -67,7 +67,10 @@ def recursionFactorial(n):
     #recursive case
     else:
         return n * recursionFactorial(n - 1)
-    
+
+# Closure Function is a function inside a function. it keeps the variable alive and accessible to the inner function
+# without making it global. Inner function is returned from the Outer function to be referrable. Outer function is
+# referred to by a variable enterCar which makes the variable invokeable. The args for enclosed/inner function are passed through that variable.
 def closureFn():
     cars = []
 
@@ -78,6 +81,22 @@ def closureFn():
     return innerClosure
 
 enterCar = closureFn()
+
+#Lambda (Anonymous Function)
+add = lambda a, b : a + b
+
+def lambdaFn(n):
+    return lambda a : a*n
+
+doubleNum = lambdaFn(2)
+tripleNum = lambdaFn(3)
+
+
+#################################
+#                               #
+#        Main Function          #
+#                               #
+#################################
 
 def main():
     sum(567,34)
@@ -93,6 +112,9 @@ def main():
     enterCar("Audi")
     enterCar("BMW")
     enterCar("Mercedes")
+    print(f'Executing Add Lambda function {add(4,5)}')
+    print(doubleNum(2))
+    print(tripleNum(2))
 
 main()
 
