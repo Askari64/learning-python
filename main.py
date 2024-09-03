@@ -60,6 +60,14 @@ def carDict():
     myCar.update({"Model": "Huracan"})
     print(myCar.items())
 
+def recursionFactorial(n):
+    #base case
+    if n <= 1:
+        return 1
+    #recursive case
+    else:
+        return n * recursionFactorial(n - 1)
+
 def main():
     sum(567,34)
     compare()
@@ -70,6 +78,8 @@ def main():
     inTuple()
     pythonSetFn()
     carDict()
+    print(recursionFactorial(5))
+
 main()
 
 """
