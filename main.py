@@ -1,4 +1,7 @@
 import random
+import datetime
+import math
+import json
 
 a, b = 29, 43
 def sum(a , b): 
@@ -91,6 +94,44 @@ def lambdaFn(n):
 doubleNum = lambdaFn(2)
 tripleNum = lambdaFn(3)
 
+#Dates
+def today():
+    x = datetime.datetime.now()
+    print (f'Today is {x.day} {x.month} {x.year} or {x.strftime("%c")}')
+
+#Math
+
+def MathFn():
+    x = math.sqrt(5)
+    print(x)
+    c = math.ceil(7.7)
+    f = math.floor(7.7)
+    print(c)
+    print(f)
+    p = math.pi
+    print(p)
+
+#JSON
+
+def JSONfn():
+
+    #JSON
+    x = '{"name":"John", "age":52,"country":"India"}'
+
+    #Parse JSON
+    y= json.loads(x)
+
+    #Returned as a dictionary
+    print(y["country"])
+
+    #Python Object
+    x = {"name": "Jane",
+         "age": 34,
+         "country": "Italy"}
+    
+    #Converts to JSON
+    y = json.dumps(x)
+    print(y)
 
 #################################
 #                               #
@@ -115,6 +156,9 @@ def main():
     print(f'Executing Add Lambda function {add(4,5)}')
     print(doubleNum(2))
     print(tripleNum(2))
+    today()
+    MathFn()
+    JSONfn()
 
 main()
 
